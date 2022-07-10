@@ -4,13 +4,19 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    public function __construct()
+    {
+    }
+
     public function index()
     {
-        return view('welcome_message');
+        phpinfo();
+        // return view('welcome_message');
     }
 
     public function page(): string
     {
-        return '111111111111111111111';
+        log_message('error', __CLASS__ . ' > ' . __FUNCTION__ . '(' . __LINE__ . ') > ' . 'abc');
+        return '1111111111111112111111';
     }
 }
